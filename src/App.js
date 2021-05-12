@@ -26,17 +26,19 @@ color: #fff;
 `;
 
 const NavBar = styled.div`
-  position: sticky;
-  top: 0;
-  padding: 1.5rem 2rem;
- 
   
-  justify-content: space-between;
-
+  display: inline;
+  width:80%;
+  top: 0;
+  background-color: blue;
+  padding
+  margin: 0 1em;
+  transition: top 500ms ease-in-out;
+  
 `;
 
 const TextLink = styled.a`
-  margin: 50px;
+ margin: 80px;
  text-decoration: none;
  color: #fff;
  font-weight:700;
@@ -44,7 +46,7 @@ const TextLink = styled.a`
 `;
 
 const Button = styled.button`
-justify-content: flex-end;
+  
   background-color: white;
   border: none;
   border-radius: 8px;
@@ -91,6 +93,7 @@ const StyledLinks = styled(Link)`
   font-size: 0.9rem;
   letter-spacing: 0.2em;
   color: #fff;
+  justify-content: flex-end;
 
   &:hover {
     color: #2B0948;
@@ -106,34 +109,27 @@ function App() {
   
   return (
     <Router>
-    <MainContainer>
-    <NavBar>
-      <TextLink href="#" target="blank" rel="noopener">BNB Space Battle</TextLink>
-    
-     <StyledLinks to="/">Home</StyledLinks>
-     <StyledLinks to="/about">About</StyledLinks> 
-     <StyledLinks to="/rules">Rules</StyledLinks> 
-     
-    <Button 
-      provider={provider}
-      loadWeb3Modal={loadWeb3Modal}
-      logoutOfWeb3Modal={logoutOfWeb3Modal}
-      >Connect Wallet</Button>
-      
-      <Switch>
-          <Route exact path="/" component={HomePage} >
-          </Route>
-          <Route path="/about" component={About}>
-          </Route>
-          <Route path="/">
-            
-          </Route>
-        </Switch>
-    </NavBar>
-   
-    
-    <Footer />
-
+      <MainContainer>
+        <NavBar>
+          <TextLink href="#" target="blank" rel="noopener">BNB Space Battle</TextLink>
+            <StyledLinks to="/">Home</StyledLinks>
+            <StyledLinks to="/about">About</StyledLinks> 
+            <StyledLinks to="/rules">Rules</StyledLinks>  
+          <Button 
+            provider={provider}
+            loadWeb3Modal={loadWeb3Modal}
+            logoutOfWeb3Modal={logoutOfWeb3Modal}
+            >Connect Wallet</Button>
+        <Switch>
+            <Route exact path="/" component={HomePage} >
+              </Route>
+              <Route path="/about" component={About}>
+              </Route>
+            <Route path="/">
+            </Route>
+          </Switch>
+        </NavBar>
+      <Footer />
     </MainContainer>
     </Router>
   );
