@@ -15,10 +15,10 @@ flex-direction: column;
 
 const Game = styled.div`
   margin:auto;
-  width: 600px;
+  width: 700px;
   height: 600px;
   color: white;
-  background-color: #fff;
+  background-color: #000000;
   border: 2px solid #D1495B;
 
 `;

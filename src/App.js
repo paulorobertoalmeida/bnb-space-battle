@@ -26,7 +26,13 @@ color: #fff;
 `;
 
 const NavBar = styled.div`
-  padding:1.5rem;
+  position: sticky;
+  top: 0;
+  padding: 1.5rem 2rem;
+ 
+  
+  justify-content: space-between;
+
 `;
 
 const TextLink = styled.a`
@@ -34,6 +40,7 @@ const TextLink = styled.a`
  text-decoration: none;
  color: #fff;
  font-weight:700;
+ font-family: 'Lato', sans-serif;
 `;
 
 const Button = styled.button`
@@ -54,6 +61,10 @@ justify-content: flex-end;
     border: none;
     outline: none;
   }
+
+  &:hover{
+    color: #98463F;
+  }
 `;
 
 function WalletButton ({ provider, loadWeb3Modal, logoutOfWeb3Modal }) {
@@ -73,6 +84,18 @@ function WalletButton ({ provider, loadWeb3Modal, logoutOfWeb3Modal }) {
   );
 }
 
+const StyledLinks = styled(Link)`
+  display: inline-block;
+  margin: 0 1em;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  color: #fff;
+
+  &:hover {
+    color: #2B0948;
+  }
+`;
 
 function App() {
   const [provider, loadWeb3Modal, logoutOfWeb3Modal] = useWeb3Modal();
@@ -87,9 +110,9 @@ function App() {
     <NavBar>
       <TextLink href="#" target="blank" rel="noopener">BNB Space Battle</TextLink>
     
-     <Link to="/">Home</Link>
-     <Link to="/about">About</Link> 
-     <Link to="/rules">Rules</Link> 
+     <StyledLinks to="/">Home</StyledLinks>
+     <StyledLinks to="/about">About</StyledLinks> 
+     <StyledLinks to="/rules">Rules</StyledLinks> 
      
     <Button 
       provider={provider}
