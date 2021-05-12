@@ -2,6 +2,8 @@
 import './App.css';
 import styled from 'styled-components'
 import Footer from  './components/Footer'
+import Header from './components/Header'
+import GameScreen from './components/GameScreen'
 
 const MainContainer = styled.div`
 margin:0;
@@ -10,33 +12,28 @@ background: linear-gradient(28deg, rgba(87,0,38,1) 0%, rgba(0,101,67,1) 49%, rgb
 color: #fff;
 `;
 
-const GameScrean = styled.div`
-  margin:auto;
-  width: 600px;
-  height: 600px;
-  color: white;
-  background-color: #fff;
-  border: 2px solid red;
-
+const NavBar = styled.div`
+  padding:1.5rem;
 `;
 
-
-const Button = styled.button`
-
+const TextLink = styled.a`
+  margin: 50px;
+ text-decoration: none;
+ color: #fff;
+ font-weight:700;
 `;
-
-
 
 
 function App() {
   return (
     <MainContainer>
-    <h1>BNB Space Battle</h1>
-    <h3>Earn Money While You Play</h3>
-    <GameScrean>Hello </GameScrean>
-    <Button> Start </Button>
-    <Button> Quit </Button>
-    <Button> Start </Button>
+    <NavBar>
+      <TextLink href="#" target="blank" rel="noopener">BNB Space Battle</TextLink>
+    
+    </NavBar>
+    <Header />
+    <GameScreen />
+    
     <Footer />
 
     </MainContainer>
