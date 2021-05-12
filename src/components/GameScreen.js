@@ -8,7 +8,7 @@ const GameContainer = styled.div`
 `;
 
 const GameDisplay = styled.div`
-margin: 2rem;
+margin: 1rem;
 display:flex;
 flex-direction: column;
 `;
@@ -29,6 +29,8 @@ flex-direction:row;
 align-items:center;
 justify-content:center;
 margin:1rem;
+
+
 `;
 
 const Button = styled.button`
@@ -40,6 +42,10 @@ background: linear-gradient(29deg, rgba(11,252,255,1) 0%, rgba(210,27,27,1) 53%,
 border-radius: 10px;
 border: none;
 color: #fff;
+
+&:hover {
+    background-color: white;
+    color: #000000;
 
 
 `;

@@ -13,8 +13,8 @@ const HomePageContainer = styled.div`
 function HomePage() {
   return(
 <HomePageContainer> 
-<Header />
-<GameScreen />
+    <Header />
+    <GameScreen />
 </HomePageContainer>
 
   );
