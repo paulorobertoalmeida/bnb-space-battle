@@ -68,6 +68,7 @@ function initCanvas(){
     var cW = ctx.canvas.width; // 700px 
     var cH = ctx.canvas.height;// 600px
 
+
     // template for naves
     var enemyTemplate = function(options){
         return {
